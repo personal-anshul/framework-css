@@ -1,0 +1,414 @@
+/* Style import */
+@import "reset";
+@import "config";
+@import "sample";
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: 0 $padding-base * $octave;
+  position: relative;
+}
+.column {
+  box-sizing: border-box;
+  float: left;
+  width: $full;
+  &.block-1,
+  &.block-2,
+  &.block-3,
+  &.block-4,
+  &.block-5,
+  &.block-6,
+  &.block-7,
+  &.block-8,
+  &.block-9,
+  &.block-10,
+  &.block-11,
+  &.block-12 {
+    width: $full;
+  }
+}
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 100%;
+}
+body {
+  color: $black;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+p {
+  margin-top: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+h1 {
+  font-size: 4.0rem;
+  letter-spacing: -.1rem;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 3.6rem;
+  letter-spacing: -.1rem;
+  line-height: 1.25;
+}
+h3 {
+  font-size: 3.0rem;
+  letter-spacing: -.1rem;
+  line-height: 1.3;
+}
+h4 {
+  font-size: 2.4rem;
+  letter-spacing: -.08rem;
+  line-height: 1.35;
+}
+h5 {
+  font-size: 1.8rem;
+  letter-spacing: -.05rem;
+  line-height: 1.5;
+}
+h6 {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+/* Larger than phablet */
+@media (min-width: 640px) {
+  .column {
+    &.block-1 {
+      width: ($full / 12) * 1;
+    }
+    &.block-2 {
+      width: ($full / 12) * 2;
+    }
+    &.block-3 {
+      width: ($full / 12) * 3;
+    }
+    &.block-4 {
+      width: ($full / 12) * 4;
+    }
+    &.block-5 {
+      width: ($full / 12) * 5;
+    }
+    &.block-6 {
+      width: ($full / 12) * 6;
+    }
+    &.block-7 {
+      width: ($full / 12) * 7;
+    }
+    &.block-8 {
+      width: ($full / 12) * 8;
+    }
+    &.block-9 {
+      width: ($full / 12) * 9;
+    }
+    &.block-10 {
+      width: ($full / 12) * 10;
+    }
+    &.block-11 {
+      width: ($full / 12) * 11;
+    }
+    &.block-12 {
+      width: ($full / 12) * 12;
+    }
+    /* Offsets */
+    &.offset-1 {
+      margin-left: ($full / 12) * 1;
+    }
+    &.offset-2 {
+      margin-left: ($full / 12) * 2;
+    }
+    &.offset-3 {
+      margin-left: ($full / 12) * 3;
+    }
+    &.offset-4 {
+      margin-left: ($full / 12) * 4;
+    }
+    &.offset-5 {
+      margin-left: ($full / 12) * 5;
+    }
+    &.offset-6 {
+      margin-left: ($full / 12) * 6;
+    }
+    &.offset-7 {
+      margin-left: ($full / 12) * 7;
+    }
+    &.offset-8 {
+      margin-left: ($full / 12) * 8;
+    }
+    &.offset-9 {
+      margin-left: ($full / 12) * 9;
+    }
+    &.offset-10 {
+      margin-left: ($full / 12) * 10;
+    }
+    &.offset-11 {
+      margin-left: ($full / 12) * 11;
+    }
+  }
+  h1 {
+    font-size: 5.0rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  }
+  h3 {
+    font-size: 3.6rem;
+  }
+  h4 {
+    font-size: 3.0rem;
+  }
+  h5 {
+    font-size: 2.4rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: $blue-dark;
+  &:hover {
+    color: darken($blue-dark, 10%);
+  }
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  background-color: transparent;
+  border: $border-base;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $black-light;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  height: 38px;
+  letter-spacing: 0.1rem;
+  line-height: 38px;
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  &:hover,
+  &:focus {
+    border-color: darken($gray, 10%);
+    color: darken($black-light, 10%);
+    outline: 0;
+  }
+  &.button-primary {
+    background-color: $blue;
+    border-color: $blue;
+    color: $white;
+    &:hover,
+    &:focus {
+      background-color: $blue-dark;
+      border-color: $blue-dark;
+      color: $white;
+    }
+  }
+}
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  background-color: $white;
+  border: $border-light;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  &:focus {
+    border: $border-lighter;
+    outline: 0;
+  }
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+textarea {
+  min-height: 100px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+fieldset {
+  border-width: 0;
+  padding: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside;
+}
+ol {
+  list-style: decimal inside;
+}
+ol, ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  font-size: 90%;
+  margin: 1.5rem 0 1.5rem 3rem;
+}
+li {
+  margin-bottom: 1rem;
+}
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  background: $gray-lighter;
+  border: $border-light;
+  border-radius: 4px;
+  font-size: 90%;
+  margin: 0 .2rem;
+  padding: .2rem .5rem;
+  white-space: nowrap;
+}
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+  th,
+  td {
+    border-bottom: $border-light;
+    padding: 12px 15px;
+    text-align: left;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem;
+}
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.block-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+.block-pull-right {
+  float: right;
+}
+.block-pull-left {
+  float: left;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-center {
+  text-align: center;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: $border-light;
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Self Clearing Goodness */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}

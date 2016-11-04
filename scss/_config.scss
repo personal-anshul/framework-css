@@ -1,0 +1,46 @@
+// ----------------------------------------------
+// SCALING RATIO
+// ----------------------------------------------
+$minor-second: 1.067;
+$major-second: 1.17;
+$minor-third: 1.2;
+$major-third: 1.25;
+$perfect-fourth: 1.333;
+$augmented-fourth: 1.414;
+$perfect-fifth: 1.5;
+$minor-sixth: 1.6;
+$major-sixth: 1.667;
+$minor-seventh: 1.778;
+$major-seventh: 1.875;
+$octave: 2;
+$major-eighth: 2.25;
+$major-tenth: 2.5;
+$major-eleventh: 2.667;
+$major-twelfth: 3;
+$double-octave: 4;
+
+// ----------------------------------------------
+// Colors
+// ----------------------------------------------
+$white: #fff;
+$black: #020202;
+$black-light: #555;
+$gray: #bbb;
+$gray-light: #d1d1d1;
+$gray-lighter: #f1f1f1;
+$blue: #33C3F0;
+$blue-dark: darken($blue, 10%);
+
+// ----------------------------------------------
+// Sass Custom Variable
+// ----------------------------------------------
+$padding-base: 0.8em;
+$border-base: 1px solid $gray;
+$border-light: 1px solid $gray-light;
+$border-lighter: 1px solid darken($gray-light, 20%);
+
+// ----------------------------------------------
+// Constants
+// ----------------------------------------------
+$full: 100%;
+$container-width: 960px;
